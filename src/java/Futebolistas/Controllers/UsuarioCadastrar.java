@@ -39,8 +39,6 @@ public class UsuarioCadastrar extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String msg = (String) request.getParameter("msg");
-        request.setAttribute("msg", msg);
         request.getRequestDispatcher("WEB-INF/home.jsp").forward(request, response);
     }
 
@@ -74,8 +72,7 @@ public class UsuarioCadastrar extends HttpServlet {
             } catch (Exception e) {
                 request.getRequestDispatcher("index.html").forward(request, response);
             }
-
-            
+          
     }
 
     /**
